@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerben Kijne — Building technology for good</title>
+  <meta name="description" content="Gerben Kijne — product & blockchain lead at Giga (UNICEF + ITU), building applications to connect every school in the world to the internet." />
+  <meta name="author" content="Gerben Kijne" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gerben Kijne — Building technology for good" />
+  <meta property="og:description" content="Product & blockchain lead at Giga (UNICEF + ITU), building applications to connect every school in the world to the internet." />
+  <meta property="og:url" content="https://gerben.kijne.eu" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@GKijne" />
+
+  <link rel="canonical" href="https://gerben.kijne.eu" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b4f4a'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='%23f4efe6' text-anchor='middle'%3Eg%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --bg: #f6f2ea;
+      --bg-soft: #efe9dd;
+      --ink: #1c2321;
+      --ink-soft: #4b5550;
+      --line: #ddd5c6;
+      --accent: #0b4f4a;
+      --accent-soft: #137a72;
+      --card: #fffdf8;
+      --shadow: 0 1px 2px rgba(28,35,33,.04), 0 12px 40px -12px rgba(28,35,33,.12);
+      --maxw: 760px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1413;
+        --bg-soft: #131b19;
+        --ink: #eef2ee;
+        --ink-soft: #a4b1ab;
+        --line: #243029;
+        --accent: #5fd3c4;
+        --accent-soft: #7fe0d3;
+        --card: #141d1b;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 20px 50px -16px rgba(0,0,0,.55);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 500px at 12% -8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
+        radial-gradient(700px 500px at 100% 0%, color-mix(in srgb, var(--accent-soft) 10%, transparent), transparent 55%);
+      z-index: 0;
+    }
+    .wrap { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---- Hero ---- */
+    header { padding: 14vh 0 7vh; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent-soft); font-weight: 600;
+      margin-bottom: 22px;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-soft); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-soft) 22%, transparent); }
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.8rem, 8vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -.02em;
+      margin: 0 0 22px;
+    }
+    .lead {
+      font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+      color: var(--ink-soft);
+      max-width: 36ch;
+      margin: 0 0 34px;
+    }
+    .lead strong { color: var(--ink); font-weight: 600; }
+
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 12px 20px; border-radius: 999px;
+      font-weight: 600; font-size: 15px;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn-primary { background: var(--accent); color: #f7f4ee; box-shadow: var(--shadow); }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+    .btn-ghost:hover { border-color: var(--accent-soft); color: var(--accent-soft); }
+
+    /* ---- Sections ---- */
+    section { padding: 4vh 0; }
+    .section-label {
+      font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent-soft); font-weight: 600; margin: 0 0 18px;
+    }
+    .prose p { color: var(--ink-soft); margin: 0 0 18px; max-width: 62ch; }
+    .prose p strong { color: var(--ink); font-weight: 600; }
+
+    /* ---- Work cards ---- */
+    .cards { display: grid; gap: 14px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent-soft) 50%, var(--line)); }
+    .card .meta { font-size: 13px; color: var(--accent-soft); font-weight: 600; letter-spacing: .03em; }
+    .card h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.35rem; margin: 6px 0 8px; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+
+    .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 8px; }
+    .fact { font-size: 15px; color: var(--ink-soft); }
+    .fact b { color: var(--ink); font-weight: 600; }
+
+    /* ---- Contact ---- */
+    .contact-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+      padding: 34px; box-shadow: var(--shadow);
+      display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;
+    }
+    .contact-card h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.7rem; margin: 0 0 6px; }
+    .contact-card p { margin: 0; color: var(--ink-soft); }
+    .socials { display: flex; gap: 10px; flex-wrap: wrap; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line);
+      font-size: 14.5px; font-weight: 500;
+      transition: border-color .18s ease, color .18s ease, transform .18s ease;
+    }
+    .chip:hover { border-color: var(--accent-soft); color: var(--accent-soft); transform: translateY(-2px); }
+    .chip svg { width: 16px; height: 16px; }
+
+    footer { padding: 6vh 0 8vh; color: var(--ink-soft); font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .heart { color: var(--accent-soft); }
+
+    .fade { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .fade:nth-child(2){ animation-delay:.06s } .fade:nth-child(3){ animation-delay:.12s }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce){ .fade{ animation:none; opacity:1; transform:none } html{scroll-behavior:auto} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="eyebrow fade"><span class="dot"></span> Stockholm · Building for impact</span>
+      <h1 class="fade">Gerben Kijne</h1>
+      <p class="lead fade">I build <strong>technology for good</strong> — leading product &amp; blockchain at <strong>Giga</strong>, a UNICEF + ITU initiative working to connect every school on earth to the internet.</p>
+      <div class="cta fade">
+        <a class="btn btn-primary" href="mailto:gerben@kijne.eu">
+          Get in touch
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gerbenkijne" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://x.com/gkijne" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap prose">
+        <p class="section-label">About</p>
+        <p>For more than <strong>ten years</strong> I've worked at the intersection of product design and emerging technology, with one consistent thread: building tools that make a measurable difference in people's lives.</p>
+        <p>Today I lead the blockchain work at <strong>Giga</strong> — a joint initiative of UNICEF and the ITU — where my team develops applications that accelerate the transition to a world in which every school is connected to the internet. I trained as a <strong>Strategic Product Designer</strong> at TU Delft, and I care about the full arc of a product: from the human problem to the system that solves it at scale.</p>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <p class="section-label">Selected work</p>
+        <div class="cards">
+          <a class="card" href="https://giga.global" target="_blank" rel="noopener">
+            <span class="meta">Giga · UNICEF + ITU</span>
+            <h3>Connecting every school to the internet</h3>
+            <p>Leading product &amp; blockchain initiatives that turn school-connectivity data into funding and transparency mechanisms — at global scale.</p>
+          </a>
+          <div class="card">
+            <span class="meta">Patchwork Kingdoms</span>
+            <h3>Generative art that funds connectivity</h3>
+            <p>A collection of 1,000 procedurally generated NFTs created with artist Nadieh Bremer from Giga's school data — raising ~$700K that went directly to connecting schools.</p>
+          </div>
+          <div class="card">
+            <span class="meta">Impact Staking</span>
+            <h3>Turning staking yield into school internet</h3>
+            <p>Pioneering on-chain mechanisms that route DeFi staking rewards toward real-world connectivity — funding impact without touching the principal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <div class="wrap prose">
+        <p class="section-label">Speaking</p>
+        <p>I speak about technology for good, web3 for the public sector, and the practical realities of shipping blockchain products inside a global institution.</p>
+        <div class="facts">
+          <span class="fact"><b>Devcon</b> — Giga: Staking for school connectivity</span>
+          <span class="fact"><b>Blockchain Expo Europe</b> — Speaker</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <h2>Let's build something good.</h2>
+            <p>Reach me at <a href="mailto:gerben@kijne.eu" style="color:var(--accent-soft);font-weight:600">gerben@kijne.eu</a></p>
+          </div>
+          <div class="socials">
+            <a class="chip" href="https://www.linkedin.com/in/gerbenkijne" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="chip" href="https://x.com/gkijne" target="_blank" rel="noopener">X</a>
+            <a class="chip" href="https://github.com/gkijne" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr"></span> Gerben Kijne</span>
+      <span>Made with <span class="heart">♥</span> in Stockholm</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
