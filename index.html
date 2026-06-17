@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerben Kijne — Building technology for good</title>
-  <meta name="description" content="Gerben Kijne — product & blockchain lead at Giga (UNICEF + ITU), building applications to connect every school in the world to the internet." />
+  <title>Gerben Kijne — Digital Product Leader</title>
+  <meta name="description" content="Gerben Kijne — Digital Product Leader with 10+ years building high-impact platforms across open-source, blockchain, SaaS and public innovation. Blockchain Product Lead at UNICEF's Global Office of Innovation." />
   <meta name="author" content="Gerben Kijne" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Gerben Kijne — Building technology for good" />
-  <meta property="og:description" content="Product & blockchain lead at Giga (UNICEF + ITU), building applications to connect every school in the world to the internet." />
+  <meta property="og:title" content="Gerben Kijne — Digital Product Leader" />
+  <meta property="og:description" content="10+ years building high-impact digital platforms across open-source, blockchain, SaaS and public innovation. Blockchain Product Lead at UNICEF." />
   <meta property="og:url" content="https://gerben.kijne.eu" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@GKijne" />
@@ -33,7 +33,7 @@
       --accent-soft: #137a72;
       --card: #fffdf8;
       --shadow: 0 1px 2px rgba(28,35,33,.04), 0 12px 40px -12px rgba(28,35,33,.12);
-      --maxw: 760px;
+      --maxw: 820px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -76,7 +76,7 @@
     a { color: inherit; text-decoration: none; }
 
     /* ---- Hero ---- */
-    header { padding: 14vh 0 7vh; }
+    header { padding: 13vh 0 5vh; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
@@ -87,16 +87,21 @@
     h1 {
       font-family: 'Fraunces', Georgia, serif;
       font-weight: 500;
-      font-size: clamp(2.8rem, 8vw, 4.6rem);
+      font-size: clamp(2.8rem, 8vw, 4.7rem);
       line-height: 1.02;
       letter-spacing: -.02em;
-      margin: 0 0 22px;
+      margin: 0 0 10px;
+    }
+    .role {
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      font-weight: 600; color: var(--accent-soft);
+      margin: 0 0 22px; letter-spacing: -.01em;
     }
     .lead {
-      font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+      font-size: clamp(1.12rem, 2.2vw, 1.35rem);
       color: var(--ink-soft);
-      max-width: 36ch;
-      margin: 0 0 34px;
+      max-width: 50ch;
+      margin: 0 0 30px;
     }
     .lead strong { color: var(--ink); font-weight: 600; }
 
@@ -105,40 +110,76 @@
       display: inline-flex; align-items: center; gap: 9px;
       padding: 12px 20px; border-radius: 999px;
       font-weight: 600; font-size: 15px;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
     .btn-primary { background: var(--accent); color: #f7f4ee; box-shadow: var(--shadow); }
     .btn-primary:hover { transform: translateY(-2px); }
     .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
     .btn-ghost:hover { border-color: var(--accent-soft); color: var(--accent-soft); }
 
+    /* ---- Stats ---- */
+    .stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      margin-top: 46px;
+    }
+    .stat {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 20px 22px; box-shadow: var(--shadow);
+    }
+    .stat .n { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.5rem, 4vw, 2.1rem); letter-spacing: -.02em; line-height: 1; }
+    .stat .l { font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; }
+    @media (max-width: 560px){ .stats{ grid-template-columns: 1fr 1fr; } .stats .stat:last-child{ grid-column: 1 / -1; } }
+
     /* ---- Sections ---- */
-    section { padding: 4vh 0; }
+    section { padding: 5vh 0; }
     .section-label {
       font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--accent-soft); font-weight: 600; margin: 0 0 18px;
+      color: var(--accent-soft); font-weight: 600; margin: 0 0 20px;
     }
-    .prose p { color: var(--ink-soft); margin: 0 0 18px; max-width: 62ch; }
+    .prose p { color: var(--ink-soft); margin: 0 0 18px; max-width: 64ch; }
     .prose p strong { color: var(--ink); font-weight: 600; }
 
-    /* ---- Work cards ---- */
-    .cards { display: grid; gap: 14px; }
+    /* ---- Experience timeline ---- */
+    .timeline { display: grid; gap: 0; }
+    .job {
+      display: grid; grid-template-columns: 160px 1fr; gap: 24px;
+      padding: 24px 0; border-top: 1px solid var(--line);
+    }
+    .job:last-child { border-bottom: 1px solid var(--line); }
+    .job .when { font-size: 14px; color: var(--ink-soft); }
+    .job .when .place { display: block; font-size: 13px; margin-top: 4px; opacity: .8; }
+    .job h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.28rem; margin: 0 0 2px; letter-spacing: -.01em; }
+    .job .org { font-weight: 600; color: var(--accent-soft); font-size: 15px; margin-bottom: 8px; }
+    .job p { margin: 0; color: var(--ink-soft); font-size: 15.5px; max-width: 58ch; }
+    .job .now { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent-soft) 40%, var(--line)); border-radius: 999px; padding: 2px 9px; margin-left: 8px; vertical-align: middle; }
+    @media (max-width: 620px){ .job{ grid-template-columns: 1fr; gap: 8px; } }
+
+    /* ---- Highlight cards ---- */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px 24px;
-      box-shadow: var(--shadow);
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      padding: 22px 24px; box-shadow: var(--shadow);
       transition: transform .2s ease, border-color .2s ease;
     }
     .card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent-soft) 50%, var(--line)); }
     .card .meta { font-size: 13px; color: var(--accent-soft); font-weight: 600; letter-spacing: .03em; }
-    .card h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.35rem; margin: 6px 0 8px; letter-spacing: -.01em; }
-    .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+    .card h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.22rem; margin: 6px 0 8px; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+    @media (max-width: 620px){ .cards{ grid-template-columns: 1fr; } }
 
-    .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 8px; }
-    .fact { font-size: 15px; color: var(--ink-soft); }
-    .fact b { color: var(--ink); font-weight: 600; }
+    /* ---- Tag rows (skills / languages / recognition) ---- */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 620px){ .grid2{ grid-template-columns: 1fr; gap: 28px; } }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag {
+      font-size: 14px; color: var(--ink-soft);
+      border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+      background: color-mix(in srgb, var(--card) 60%, transparent);
+    }
+    .reclist { list-style: none; padding: 0; margin: 0; }
+    .reclist li { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; color: var(--ink-soft); }
+    .reclist .star { color: var(--accent-soft); flex: none; margin-top: 3px; }
+    .reclist b { color: var(--ink); font-weight: 600; }
 
     /* ---- Contact ---- */
     .contact-card {
@@ -156,14 +197,13 @@
       transition: border-color .18s ease, color .18s ease, transform .18s ease;
     }
     .chip:hover { border-color: var(--accent-soft); color: var(--accent-soft); transform: translateY(-2px); }
-    .chip svg { width: 16px; height: 16px; }
 
     footer { padding: 6vh 0 8vh; color: var(--ink-soft); font-size: 14px; }
     footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .heart { color: var(--accent-soft); }
 
     .fade { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
-    .fade:nth-child(2){ animation-delay:.06s } .fade:nth-child(3){ animation-delay:.12s }
+    .fade:nth-child(2){ animation-delay:.05s } .fade:nth-child(3){ animation-delay:.1s } .fade:nth-child(4){ animation-delay:.15s } .fade:nth-child(5){ animation-delay:.2s }
     @keyframes rise { to { opacity: 1; transform: none; } }
     @media (prefers-reduced-motion: reduce){ .fade{ animation:none; opacity:1; transform:none } html{scroll-behavior:auto} }
   </style>
@@ -171,16 +211,23 @@
 <body>
   <header>
     <div class="wrap">
-      <span class="eyebrow fade"><span class="dot"></span> Stockholm · Building for impact</span>
+      <span class="eyebrow fade"><span class="dot"></span> Stockholm, Sweden · Building for impact</span>
       <h1 class="fade">Gerben Kijne</h1>
-      <p class="lead fade">I build <strong>technology for good</strong> — leading product &amp; blockchain at <strong>Giga</strong>, a UNICEF + ITU initiative working to connect every school on earth to the internet.</p>
+      <p class="role fade">Digital Product Leader</p>
+      <p class="lead fade">Ten years building high-impact digital platforms across <strong>open-source, blockchain, SaaS and public innovation</strong> — today as Blockchain Product Lead at UNICEF's Global Office of Innovation.</p>
       <div class="cta fade">
         <a class="btn btn-primary" href="mailto:gerben@kijne.eu">
           Get in touch
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gerbenkijne" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gerbenkijne/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://x.com/gkijne" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat fade"><div class="n">90,000+</div><div class="l">schools reached</div></div>
+        <div class="stat fade"><div class="n">5M+</div><div class="l">students impacted</div></div>
+        <div class="stat fade"><div class="n">10+ yrs</div><div class="l">product leadership</div></div>
       </div>
     </div>
   </header>
@@ -189,8 +236,56 @@
     <section id="about">
       <div class="wrap prose">
         <p class="section-label">About</p>
-        <p>For more than <strong>ten years</strong> I've worked at the intersection of product design and emerging technology, with one consistent thread: building tools that make a measurable difference in people's lives.</p>
-        <p>Today I lead the blockchain work at <strong>Giga</strong> — a joint initiative of UNICEF and the ITU — where my team develops applications that accelerate the transition to a world in which every school is connected to the internet. I trained as a <strong>Strategic Product Designer</strong> at TU Delft, and I care about the full arc of a product: from the human problem to the system that solves it at scale.</p>
+        <p>I'm a strategic product leader focused on building transparent systems that empower people. For the last decade I've delivered high-impact digital platforms — leading <strong>open-source infrastructure</strong> at UNICEF and collaborating across global engineering, compliance, and community stakeholders.</p>
+        <p>I work well in <strong>regulated environments</strong> and cross-functional teams, with a track record across blockchain, fintech, SaaS and public-sector innovation. I trained as a Strategic Product Designer at TU Delft, and I care about the full arc of a product — from the human problem to the system that solves it at scale.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <p class="section-label">Experience</p>
+        <div class="timeline">
+          <div class="job">
+            <div class="when">Dec 2021 — present<span class="place">Stockholm, SE</span></div>
+            <div>
+              <h3>Blockchain Product Lead <span class="now">Now</span></h3>
+              <div class="org">UNICEF — Global Office of Innovation</div>
+              <p>Lead end-to-end product strategy for three open-source blockchain infrastructure projects serving the Giga initiative to connect schools worldwide. Own public roadmaps with global contributors and manage distributed, multi-vendor teams in a complex regulatory environment — delivering impact reaching 90,000+ schools and 5M+ students.</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when">Jan 2020 — Oct 2021<span class="place">Stockholm, SE</span></div>
+            <div>
+              <h3>Chief Product Officer</h3>
+              <div class="org">Betao Group</div>
+              <p>Directed strategy across 5 digital products and 4 brands with combined yearly revenue over €10M. Grew revenue 46% YoY and launched "Educademy," a training platform reaching €72K/month within six months, leading a 15+ person product, tech, design and marketing team.</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when">Mar 2014 — Nov 2019<span class="place">Manchester, UK</span></div>
+            <div>
+              <h3>Project Manager — Product Innovation</h3>
+              <div class="org">PixelMill Ltd.</div>
+              <p>Coordinated 5+ EU- and UK-funded innovation projects totalling €900K+, designing and launching MVPs for fintech, education and smart-city initiatives through user research, iterative validation and stakeholder alignment.</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when">Mar 2014 — Mar 2017<span class="place">Amsterdam, NL</span></div>
+            <div>
+              <h3>Innovation Consultant</h3>
+              <div class="org">Amsterdam Smart City</div>
+              <p>Designed a gamified proof of concept to foster sustainable behavior and civic engagement — nominated for the Young Innovator Award at European Utility Week 2015.</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when">Mar 2013 — Dec 2013<span class="place">Amsterdam, NL</span></div>
+            <div>
+              <h3>Strategy Consulting Graduate</h3>
+              <div class="org">Accenture Management Consulting</div>
+              <p>Supported digital transformation and service innovation projects across the public sector and finance.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -201,29 +296,57 @@
           <a class="card" href="https://giga.global" target="_blank" rel="noopener">
             <span class="meta">Giga · UNICEF + ITU</span>
             <h3>Connecting every school to the internet</h3>
-            <p>Leading product &amp; blockchain initiatives that turn school-connectivity data into funding and transparency mechanisms — at global scale.</p>
+            <p>Product &amp; blockchain initiatives turning school-connectivity data into funding and transparency mechanisms, at global scale.</p>
           </a>
           <div class="card">
             <span class="meta">Patchwork Kingdoms</span>
             <h3>Generative art that funds connectivity</h3>
-            <p>A collection of 1,000 procedurally generated NFTs created with artist Nadieh Bremer from Giga's school data — raising ~$700K that went directly to connecting schools.</p>
+            <p>1,000 procedurally generated NFTs created with artist Nadieh Bremer from Giga's school data — raising ~$700K that went directly to connecting schools.</p>
+          </div>
+          <div class="card">
+            <span class="meta">Educademy · Betao</span>
+            <h3>A training platform to €72K/month</h3>
+            <p>Conceived and launched an online education product that reached €72K monthly revenue within its first six months.</p>
           </div>
           <div class="card">
             <span class="meta">Impact Staking</span>
             <h3>Turning staking yield into school internet</h3>
-            <p>Pioneering on-chain mechanisms that route DeFi staking rewards toward real-world connectivity — funding impact without touching the principal.</p>
+            <p>On-chain mechanisms that route DeFi staking rewards toward real-world connectivity — funding impact without touching the principal.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="speaking">
-      <div class="wrap prose">
-        <p class="section-label">Speaking</p>
-        <p>I speak about technology for good, web3 for the public sector, and the practical realities of shipping blockchain products inside a global institution.</p>
-        <div class="facts">
-          <span class="fact"><b>Devcon</b> — Giga: Staking for school connectivity</span>
-          <span class="fact"><b>Blockchain Expo Europe</b> — Speaker</span>
+    <section id="details">
+      <div class="wrap">
+        <div class="grid2">
+          <div>
+            <p class="section-label">Core competencies</p>
+            <div class="tags">
+              <span class="tag">Product Vision &amp; Roadmapping</span>
+              <span class="tag">Go-to-Market Strategy</span>
+              <span class="tag">UX Design</span>
+              <span class="tag">Regulatory &amp; Compliance</span>
+              <span class="tag">SaaS &amp; Digital Platforms</span>
+              <span class="tag">Open-Source Product</span>
+              <span class="tag">Contributor Ecosystems</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">KPIs &amp; Data-driven Decisions</span>
+              <span class="tag">Cross-functional Engineering</span>
+            </div>
+          </div>
+          <div>
+            <p class="section-label">Recognition</p>
+            <ul class="reclist">
+              <li><span class="star">★</span><span><b>Forbes 30 Under 30</b> — 2016</span></li>
+              <li><span class="star">★</span><span><b>3 international innovation awards</b> &amp; 3 further nominations for digital product excellence</span></li>
+            </ul>
+            <p class="section-label" style="margin-top:28px">Education &amp; languages</p>
+            <ul class="reclist">
+              <li><span class="star">◇</span><span><b>MSc Strategic Product Design</b> &amp; <b>BSc Industrial Design Engineering</b> — TU Delft</span></li>
+              <li><span class="star">◇</span><span>English (fluent) · Dutch (native) · French (professional) · Swedish (conversational)</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -236,9 +359,8 @@
             <p>Reach me at <a href="mailto:gerben@kijne.eu" style="color:var(--accent-soft);font-weight:600">gerben@kijne.eu</a></p>
           </div>
           <div class="socials">
-            <a class="chip" href="https://www.linkedin.com/in/gerbenkijne" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="chip" href="https://www.linkedin.com/in/gerbenkijne/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="chip" href="https://x.com/gkijne" target="_blank" rel="noopener">X</a>
-            <a class="chip" href="https://github.com/gkijne" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
