@@ -77,6 +77,16 @@
 
     /* ---- Hero ---- */
     header { padding: 13vh 0 5vh; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 38px; align-items: center; }
+    @media (min-width: 760px){ .hero-grid { grid-template-columns: 1.3fr .8fr; gap: 48px; } }
+    .hero-portrait { display: flex; justify-content: flex-start; }
+    @media (min-width: 760px){ .hero-portrait { justify-content: flex-end; } }
+    .hero-portrait img {
+      width: 100%; max-width: 320px; aspect-ratio: 4/5;
+      object-fit: cover; object-position: 50% 22%;
+      border-radius: 22px; border: 1px solid var(--line);
+      box-shadow: var(--shadow); display: block;
+    }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
@@ -210,18 +220,23 @@
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <span class="eyebrow fade"><span class="dot"></span> Based in Stockholm, Sweden</span>
-      <h1 class="fade">Gerben Kijne</h1>
-      <p class="role fade">Digital Product Leader</p>
-      <p class="lead fade">I'm a product person who likes working on things that matter. For the past decade I've helped build digital platforms across <strong>open source, blockchain, SaaS and the public sector</strong> — currently as Blockchain Product Lead at UNICEF's Global Office of Innovation.</p>
-      <div class="cta fade">
-        <a class="btn btn-primary" href="mailto:gerben@kijne.eu">
-          Get in touch
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gerbenkijne/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://x.com/gkijne" target="_blank" rel="noopener">X / Twitter</a>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow fade"><span class="dot"></span> Based in Stockholm, Sweden</span>
+        <h1 class="fade">Gerben Kijne</h1>
+        <p class="role fade">Digital Product Leader</p>
+        <p class="lead fade">I'm a product person who likes working on things that matter. For the past decade I've helped build digital platforms across <strong>open source, blockchain, SaaS and the public sector</strong> — currently as Blockchain Product Lead at UNICEF's Global Office of Innovation.</p>
+        <div class="cta fade">
+          <a class="btn btn-primary" href="mailto:gerben@kijne.eu">
+            Get in touch
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/gerbenkijne/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://x.com/gkijne" target="_blank" rel="noopener">X / Twitter</a>
+        </div>
+      </div>
+      <div class="hero-portrait fade">
+        <img src="assets/headshot.jpg" alt="Portrait of Gerben Kijne" width="320" height="400" loading="eager" />
       </div>
     </div>
   </header>
